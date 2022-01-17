@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Baloo+Da+2:wght@400;500&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  background-color: #f3f1ff;
+  font-family: "Poppins", "Baloo Da 2", sans-serif;
+  color: #555;
+}
+span {
+  color: #222;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: 500;
+  color: #222;
+}
+small {
+  font-size: 0.8rem;
+}
+ul {
+  list-style: bengali;
+  padding: 10px 50px;
+}
+a {
+  color: #444;
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  color: #222;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.flex1 {
+  flex: 1;
+}
+.justify-center {
+  justify-content: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+.align-end {
+  align-items: end;
+}
+.direction-column {
+  flex-direction: column;
+}
+.space-around {
+  justify-content: space-around;
+}
+.text-center {
+  text-align: center;
+}
+.border-top {
+  border-top: 1px solid #f3f1ff;
+  padding-top: 20px;
+}
+.inner-section {
+  max-width: 980px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+section {
+  margin-top: 15px;
+  padding: 20px;
+  border-radius: 10px;
+}
+/* HEADER */
+header,
+footer {
+  background-color: #fff;
+  padding: 10px 0px;
+}
+.my-profile a {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.title h2 {
+  font-weight: 500;
+  font-size: 1.6em;
+  line-height: 35px;
+}
+
+.title p {
+  position: relative;
+  top: -9px;
+  font-size: 13px;
+  color: #555;
+}
+
+span.author-name {
+  color: #222;
+}
+.my-profile a {
+  margin-left: 10px;
+  font-size: 20px;
+  color: #555;
+}
+
+.my-profile a:hover {
+  color: #222;
+}
+
+/* section */
+code {
+  margin: 15px 5px;
+  color: #222;
+}
+section h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+section p {
+  text-align: justify;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.section-thumbnail {
+  width: 350px;
+}
+
+.ml-40 {
+  margin-left: 40px;
+}
+
+.mr-40 {
+  margin-right: 40px;
+}
+.px-10 {
+  padding-bottom: 10px;
+}
+.width-full {
+  width: 100%;
+}
+.section-thumbnail img {
+  width: 350px;
+}
+
+.section-thumbnail figcaption {
+  font-size: 0.8em;
+  text-align: justify;
+}
+
+/*FOOTER*/
+footer {
+  height: 150px;
+  margin-top: 15px;
+}

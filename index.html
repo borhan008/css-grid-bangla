@@ -10,7 +10,10 @@
       src="https://kit.fontawesome.com/7ceb067bec.js"
       crossorigin="anonymous"
     ></script>
-    <meta name="google-site-verification" content="-ARKMzB25zCcKKR2uah7z6hTzdI0p65jK85kLqLhQ-8" />
+    <meta
+      name="google-site-verification"
+      content="-ARKMzB25zCcKKR2uah7z6hTzdI0p65jK85kLqLhQ-8"
+    />
   </head>
   <body>
     <header class="flex justify-center align-center">
@@ -35,6 +38,9 @@
       <section class="inner-section">
         <h2 class="mr-40">সতর্কতা:</h2>
         <p>
+          <a href="https://sultanulborhan.github.io/css-grid-bangla/"
+            >CSS Grid Bangla</a
+          >
           এটা কোন প্রফেশনাল লেখা নয় । অনেকটা পার্সোনাল নোট করতে গিয়ে করে ফেলা ।
           তাই, এটতেও ভুল অবশ্যই আছে । "এটাই বাস্তব, কিছু করার নেই" । প্রয়োজনে
           নিজ দায়িত্বে সংশোধন হয়ে নিবেন এবং চাইলে আমাকেও ভুলগুলো ধরে দিতে পারেন
@@ -53,6 +59,8 @@
             <li><a href="#section7">গ্রিড লাইন</a></li>
             <li><a href="#section9">অ্যালাইন করা</a></li>
             <li><a href="#section12">গ্রিড নাকি ইনলাইন গ্রিড? </a></li>
+            <li><a href="#section13">অটো ফ্লো</a></li>
+            <li><a href="#section14">গ্রিড অ্যারিয়া নির্ধারণ/নাম দেওয়া</a></li>
           </ul>
         </div>
         <div class="section-thumbnail ml-40">
@@ -148,8 +156,7 @@
               }<br />
               .single-grid{<br />
               background:lightgray;<br />
-              padding:20px;<br />
-              border:2px solid #000; <br />
+              padding:10px;<br />
 
               }
             </code>
@@ -162,11 +169,29 @@
 
         <div class="section-thumbnail">
           <figure class="flex direction-column align-center">
-            <img src="img/grid-3.png" alt="" />
+            <div
+              class="grid"
+              style="
+                display: grid;
+                grid-template-columns: 100px 100px 100px;
+                grid-gap: 2px;
+              "
+            >
+              <div class="single-grid" style="padding: 10px">1</div>
+              <div class="single-grid" style="padding: 10px">2</div>
+              <div class="single-grid" style="padding: 10px">3</div>
+              <div class="single-grid" style="padding: 10px">4</div>
+              <div class="single-grid" style="padding: 10px">5</div>
+              <div class="single-grid" style="padding: 10px">6</div>
+              <div class="single-grid" style="padding: 10px">7</div>
+              <div class="single-grid" style="padding: 10px">8</div>
+              <div class="single-grid" style="padding: 10px">9</div>
+            </div>
             <figcaption>
               দেখা যাচ্ছে, তিনটা কলামে ভাগ হয়ে গিয়েছে এবং সবার সাইজ সমান, কারণ
               আমরা তিনটা কলামকেই <code>100px</code> করেই দিয়েছি । আর এখানে নয়টা
               দেখানোর কারণ আমি চাইল্ড ডিব আরো তিনটা দিয়েছি শেষে ।
+              <a href="#section5">Grid Gap</a> নিয়ে পরে বলা হবে ।
             </figcaption>
           </figure>
         </div>
@@ -211,13 +236,26 @@
 
           <div class="section-thumbnail">
             <figure class="flex direction-column align-center">
-              <img src="img/grd-4.png" alt="" />
+              <div
+                class="grid"
+                style="
+                  display: grid;
+                  grid-template-columns: 100px 80px 100px;
+                  grid-template-rows: 80px 50px;
+                  grid-gap: 2px;
+                "
+              >
+                <div class="single-grid" style="padding: 10px">1</div>
+                <div class="single-grid" style="padding: 10px">2</div>
+                <div class="single-grid" style="padding: 10px">3</div>
+                <div class="single-grid" style="padding: 10px">4</div>
+                <div class="single-grid" style="padding: 10px">5</div>
+                <div class="single-grid" style="padding: 10px">6</div>
+              </div>
               <figcaption>
                 এখানে দুইটা সারি তৈরি হয়েছে ৮০ এবং ৫০ পিক্সেলের । পাশাপাশি তিনটি
                 কলাম হয়েছে ১০০, ৮০ এবং ১০০ পিক্সেলের । কেননা, আমরা তাই দিয়েছিলাম
                 ।
-                <code>single-grid</code> ক্লাসে স্টাইলগুলো শুধুমাত্র বোঝার
-                সুবিধার জন্য দেওয়া হয়েছে ।
               </figcaption>
             </figure>
           </div>
@@ -267,7 +305,23 @@
 
         <div class="section-thumbnail px-10">
           <figure class="flex direction-column align-center">
-            <img src="img/grid-5.png" alt="" />
+            <div
+              class="grid"
+              style="
+                display: grid;
+                grid-template-columns: 100px 80px 100px;
+                grid-template-rows: 80px 50px;
+                grid-gap: 20px 10px;
+              "
+            >
+              <div class="single-grid" style="padding: 10px">1</div>
+              <div class="single-grid" style="padding: 10px">2</div>
+              <div class="single-grid" style="padding: 10px">3</div>
+              <div class="single-grid" style="padding: 10px">4</div>
+              <div class="single-grid" style="padding: 10px">5</div>
+              <div class="single-grid" style="padding: 10px">6</div>
+            </div>
+
             <figcaption>
               কলামগুলোর মাঝে ১০ পিক্সেলের এবং রো'র মাঝে ২০ পিক্সেলের গ্যাপ দেখা
               যায় ।
@@ -285,7 +339,7 @@
       </section>
       <section class="inner-section direction-column" id="section6">
         <div class="flex align-center space-between px-10">
-          <div class="section-details mr-40">
+          <div class="section-details mr-40 flex1">
             <h3>ফ্রাকশনাল ইউনিট এবং রিপিট</h3>
             <p>
               এমনও হতে পারে যে আমরা সরাসরি পিক্সল ব্যবহার করতে চাই না । আমরা
@@ -311,7 +365,21 @@
           </div>
           <div class="section-thumbnail">
             <figure class="flex direction-column align-center">
-              <img src="img/grid-6.png" alt="" />
+              <div
+                class="grid width-full flex1"
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(2, 1fr) 2fr;
+                  grid-gap: 20px 10px;
+                "
+              >
+                <div class="single-grid" style="padding: 10px">1</div>
+                <div class="single-grid" style="padding: 10px">2</div>
+                <div class="single-grid" style="padding: 10px">3</div>
+                <div class="single-grid" style="padding: 10px">4</div>
+                <div class="single-grid" style="padding: 10px">5</div>
+                <div class="single-grid" style="padding: 10px">6</div>
+              </div>
               <figcaption>
                 <strong>
                   .grid{<br />
@@ -401,7 +469,28 @@
         <div class="flex align-center width-full">
           <div class="section-thumbnail mr-40">
             <figure class="flex direction-column align-center">
-              <img src="img/grid-9.png" alt="" />
+              <div
+                class="grid width-full"
+                style="
+                  display: grid;
+                  grid-template-columns: 100px 80px 100px;
+                  grid-template-rows: 80px 50px;
+                  grid-gap: 2px;
+                  justify-content: center;
+                "
+              >
+                <div class="single-grid" style="padding: 10px">1</div>
+                <div class="single-grid" style="padding: 10px">2</div>
+                <div class="single-grid" style="padding: 10px">3</div>
+                <div class="single-grid" style="padding: 10px">4</div>
+                <div class="single-grid" style="padding: 10px">5</div>
+                <div
+                  class="single-grid"
+                  style="padding: 10px; grid-area: 1/2/2/3"
+                >
+                  6
+                </div>
+              </div>
               <figcaption>
                 আমাদের সর্বশেষ এলিমেন্টটি ২ নাম্বারের জায়গায় চলে এসেছে । আমরা
                 চাইলে এভাবে কোন একটা এলিমেন্টকে অন্য এলিমেন্টের জায়গায় বা এর
@@ -573,7 +662,26 @@
         <div class="flex space-between align-center px-10">
           <div class="section-thumbnail">
             <figure class="flex direction-column align-center">
-              <img src="img/grid-12.png" alt="" />
+              <div
+                class="grid width-full"
+                style="
+                  display: grid;
+                  grid-template: repeat(3, 50px) / repeat(3, 50px);
+                  justify-content: space-between;
+                  align-content: space-around;
+                  height: 250px;
+                "
+              >
+                <div class="single-grid" style="padding: 0px">1</div>
+                <div class="single-grid" style="padding: 0px">2</div>
+                <div class="single-grid" style="padding: 0px">3</div>
+                <div class="single-grid" style="padding: 0px">4</div>
+                <div class="single-grid" style="padding: 0px">5</div>
+                <div class="single-grid" style="padding: 0px">6</div>
+                <div class="single-grid" style="padding: 0px">7</div>
+                <div class="single-grid" style="padding: 0px">8</div>
+                <div class="single-grid" style="padding: 0px">9</div>
+              </div>
               <figcaption>
                 <span>Grid-gap</span> না দিয়েই এরা দূরে সরে গিয়েছে । কারণ আমরা
                 <code>justify-content</code> এবং <code>align-content</code> এ
@@ -632,7 +740,31 @@
         <div class="flex space-between px-10">
           <div class="section-thumbnail">
             <figure class="flex direction-column align-center">
-              <img src="img/grid-13.png" alt="" />
+              <div
+                class="grid width-full"
+                style="
+                  display: grid;
+                  grid-template: repeat(3, 50px) / repeat(3, 50px);
+                  justify-content: space-between;
+                  align-content: space-around;
+                  height: 250px;
+                "
+              >
+                <div class="single-grid" style="padding: 0px">1</div>
+                <div class="single-grid" style="padding: 0px">2</div>
+                <div class="single-grid" style="padding: 0px">3</div>
+                <div class="single-grid" style="padding: 0px">4</div>
+                <div class="single-grid" style="padding: 0px">5</div>
+                <div class="single-grid" style="padding: 0px">6</div>
+                <div class="single-grid" style="padding: 0px">7</div>
+                <div class="single-grid" style="padding: 0px">8</div>
+                <div
+                  class="single-grid"
+                  style="padding: 0px; align-self: end; justify-self: center"
+                >
+                  9
+                </div>
+              </div>
               <figcaption>
                 <span>৯ নং আইটেমটা</span> নিজের সাপেক্ষে vertically শেষে/নিচে
                 <span>(end)</span> এবং horizontally মাঝখানে
@@ -703,27 +835,224 @@
         </div>
       </section>
 
-      <section class="inner-section space-between" id="section">
-        <div class="section-details ml-40">
-          <h3>STILL LEARNING....</h3>
+      <section class="inner-section direction-column" id="section13">
+        <div class="section-details px-10">
+          <h3>অটো ফ্লো</h3>
+          <p>
+            ধরা যাক, আমরা বলেছি
+            <code>grid-template-rows:repeat(3,100px)</code> । অর্থাৎ ১০০
+            পিক্সেলের তিনটি রো করতে । কিন্তু এই তিনটি ছাড়া যদি আমাদের আরো আইটেম
+            থাকে তাহলে তাদের কী হবে ? এরাও কি রো হবে নাকি কলাম ? এইটা ঠিক করে
+            দিতে চাইলে <code>grid-auto-flow: row নাকি column;</code> সেটা বলে
+            দিতে পারি । আমরা চাইলে এই অটো রো বা কলাম হয়ে যাওয়া আইটেমগুলোর সাইজও
+            ঠিক করে দিতে পারি <code>grid-auto-columns</code> এবং
+            <code>grid-auto-rows</code> প্রোপার্টিতে ।
+          </p>
           <p></p>
+        </div>
+
+        <div class="flex space-around width-full px-10">
+          <div class="section-details mr-40">
+            <code class="px-10 block">
+              &lt;div class="grid"> <br />
+              &lt;div class="single-grid">1&lt;/div><br />
+              &lt;div class="single-grid">2&lt;/div><br />
+              .... <br />
+              &lt;div class="single-grid">6&lt;/div><br />
+              &lt;/div>
+            </code>
+            <code>
+              <code>
+                <br />
+                .grid{<br />
+
+                display: grid;<br />
+                grid-template-columns: repeat(2, 30px);<br />
+                grid-auto-flow: column;<br />
+                grid-auto-columns: 1fr;<br />
+                grid-gap: 2px;<br />
+                }
+              </code>
+            </code>
+          </div>
+          <div class="section-thumbnail">
+            <figure class="flex direction-column align-center">
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(2, 30px);
+                  grid-auto-flow: column;
+                  grid-auto-columns: 1fr;
+                  grid-gap: 2px;
+                  height: 200px;
+                  align-content: center;
+                "
+                class="width-full"
+              >
+                <div class="single-grid">1</div>
+                <div class="single-grid">2</div>
+                <div class="single-grid">3</div>
+                <div class="single-grid">4</div>
+                <div class="single-grid">5</div>
+                <div class="single-grid">6</div>
+              </div>
+              <figcaption>
+                এখানে প্রথম দুইটি কলাম ৩০পিক্সেল করে পেয়েছে এবং বাকিগুলো
+                কন্টেইনারের বাকি অংশ সমানভাগে ভাগ করে ১ ভাগ করে পেয়েছে ।
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
-      <!--  <section class="inner-section space-between" id="section">
-        <div class="section-thumbnail mr-40">
-          <figure class="flex direction-column align-center">
-            <img src="img/grid-2.png" alt="" />
-            <figcaption></figcaption>
-          </figure>
+      <section class="inner-section direction-column" id="section14">
+        <div class="section-details px-10 width-full">
+          <h3>গ্রিড অ্যারিয়া নির্ধারণ/নাম দেওয়া</h3>
+          <p>ভাবুন আমরা কন্টেইনারকে রো বরাবর ছয়ভাগে ভাগ করবো ।</p>
+          <ul>
+            <li>প্রথম রো'তে হেডার থাকবে এবং পুরো অংশই পাবে ।</li>
+            <li>
+              দ্বিতীয় রো তিনভাগ হবে । মাঝখানে কনটেন্ট, দুই পাশে দুইটা সাইডবার ।
+              সাইডবার দুটো পাবে এক ভাগ করে করে, বাকি (৪ ভাগ) অংশ পাবে কন্টেন্ট ।
+            </li>
+            <li>
+              এইটা ফুটার । ফুটারের দুইটি অংশ থাকবে । footer left (৪ ভাগ) এবং
+              footer right (২ ভাগ) ।
+            </li>
+          </ul>
+          <p>
+            এভাবে করার জন্য আমাদের CSS Grid দিয়ে দিয়েছে
+            <code>grid-template-areas</code> property । একটা উদাহরণ দেওয়া যাক ।
+          </p>
+          <code class="block">
+            grid-template-areas: <br />
+            "header header header" <br />
+            "sidebar1 contnt siderbar1" <br />
+            "footer footer footer" ;<br />
+          </code>
+          <p>
+            এখানে আমরা আমাদের পুরো কন্টেইনারকে তিনটি কলাম এবং তিনটি রো'তে ভাগ
+            করেছি । প্রথম রো'তে পুরোটাই হেডার । দ্বিতীয় রো এর প্রথম কলামে
+            সাইডবার১, দ্বিতীয় কলামে কন্টেন্ট এবং তৃতীয় কলামে সাইডবার২ । আর তিন
+            নাম্বার রো'র সব কলাম জুড়ে আছে ফুটার ।
+          </p>
+
+          <p>
+            এবার আমরা যে আইটেমকে হেডার হিসেবে দেখতে চাই তাকে একটা ক্লাস দিয়ে
+            অথবা inline css এ লিখে দিতে পারি <code>grid-area:header</code> ।
+            এভাবে বাকিগুলোও ...
+          </p>
         </div>
-        <div class="section-details">
-          <h3></h3>
-          <p></p>
+
+        <div class="flex width-full px-10">
+          <div class="section-details flex1 mr-40">
+            <code class="block">
+              &lt;div class="grid"> <br />
+              &lt;div class="header">Header&lt;/div><br />
+              &lt;div class="sidebar1">S1&lt;/div><br />
+              &lt;div class="content">Content&lt;/div><br />
+              &lt;div class="sidebar2">S2&lt;/div><br />
+              &lt;div class="f-left">Footer Left&lt;/div><br />
+              &lt;div class="f-right">Footer Right&lt;/div><br />
+              &lt;/div>
+            </code>
+            <div class="flex space-between">
+              <code>
+                .grid{<br />
+                display: grid;<br />
+                grid-template-areas:<br />
+                'h h h h h h'<br />
+                's1 c c c c s2'<br />
+                'fl fl fl fr fr fr';<br />
+                grid-gap: 2px;<br />
+                grid-template-rows: <br />50px 1fr 50px;<br />
+                }<br />
+              </code>
+              <code>
+                .header{<br />
+                grid-area:h;<br />
+                }<br />
+                .sidebar1{<br />
+                grid-area:s1;<br />
+                }
+              </code>
+              <code>
+                .content{<br />
+                grid-area:c;<br />
+                }<br />
+                .sidebar2{<br />
+                grid-area:s2;<br />
+                }<br />
+                .f-left{<br />
+                grid-area:fl;<br />
+                }<br />
+
+                .f-right{<br />
+                grid-area:fr;<br />
+                }<br />
+              </code>
+            </div>
+          </div>
+          <div class="section-thumbnail">
+            <figure class="flex direction-column align-center">
+              <div
+                style="
+                  display: grid;
+                  grid-template-areas:
+                    'header header header header header header'
+                    'sidebar1 content content content content sidebar2'
+                    'footer-left footer-left footer-left footer-right footer-right footer-right';
+                  grid-gap: 2px;
+                  height: 300px;
+                  grid-template-rows: 50px 1fr 50px;
+                "
+                class="width-full"
+              >
+                <div class="header single-grid" style="grid-area: header">
+                  Header
+                </div>
+                <div class="siderbar-1 single-grid" style="grid-area: sidebar1">
+                  S-1
+                </div>
+                <div class="sidebar-2 single-grid" style="grid-area: sidebar2">
+                  S-2
+                </div>
+                <div class="content single-grid" style="grid-area: content">
+                  contnet
+                </div>
+                <div
+                  class="footer-left single-grid"
+                  style="grid-area: footer-left"
+                >
+                  Footer Left
+                </div>
+                <div
+                  class="footer-right single-grid"
+                  style="grid-area: footer-right"
+                >
+                  Footer Right
+                </div>
+              </div>
+              <figcaption>
+                <span>grid-template-rows: 50px 1fr 50px;</span> এ দিয়ে বলা হয়েছে
+                প্রথম এবং তৃতীয় রো (হেডার এবং ফুটার) <span>50px</span> করে পাবে
+                এবং বাকি অংশ জুড়ে থাকবে সেকেন্ড রো ।
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
-      <section class="inner-section space-between" id="section">
-        <div class="section-details ml-40">
+      <section class="inner-section space-between">
+        <div class="section-details ml-40 text-center width-full">
+          <h1>CSS Grid Layout Bangla</h1>
+          <a href="https://github.com/sultanulborhan/css-grid-bangla">
+            <i class="fa fa-github"></i> Download Source Code
+            <strong>for personal use only.</strong>
+          </a>
+        </div>
+      </section>
+      <!--<section class="inner-section space-between" id="section">
+        <div class="section-details mr-40">
           <h3></h3>
           <p></p>
         </div>
@@ -733,145 +1062,7 @@
             <figcaption></figcaption>
           </figure>
         </div>
-      </section>
-
-      <section class="inner-section space-between" id="section">
-        <div class="section-thumbnail mr-40">
-          <figure class="flex direction-column align-center">
-            <img src="img/grid-2.png" alt="" />
-            <figcaption></figcaption>
-          </figure>
-        </div>
-        <div class="section-details">
-          <h3></h3>
-          <p></p>
-        </div>
-      </section>
-      <section class="inner-section space-between" id="section">
-        <div class="section-details ml-40">
-          <h3></h3>
-          <p></p>
-        </div>
-        <div class="section-thumbnail">
-          <figure class="flex direction-column align-center">
-            <img src="img/grid-2.png" alt="" />
-            <figcaption></figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="inner-section space-between" id="section">
-        <div class="section-thumbnail mr-40">
-          <figure class="flex direction-column align-center">
-            <img src="img/grid-2.png" alt="" />
-            <figcaption></figcaption>
-          </figure>
-        </div>
-        <div class="section-details">
-          <h3></h3>
-          <p></p>
-        </div>
-      </section>
-      <section class="inner-section space-between" id="section">
-        <div class="section-details ml-40">
-          <h3></h3>
-          <p></p>
-        </div>
-        <div class="section-thumbnail">
-          <figure class="flex direction-column align-center">
-            <img src="img/grid-2.png" alt="" />
-            <figcaption></figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="inner-section space-between" id="section">
-        <div class="section-thumbnail mr-40">
-          <figure class="flex direction-column align-center">
-            <img src="img/grid-2.png" alt="" />
-            <figcaption></figcaption>
-          </figure>
-        </div>
-        <div class="section-details">
-          <h3></h3>
-          <p></p>
-        </div>
-      </section>
-      <section class="inner-section space-between" id="section">
-        <div class="section-details ml-40">
-          <h3></h3>
-          <p></p>
-        </div>
-        <div class="section-thumbnail">
-          <figure class="flex direction-column align-center">
-            <img src="img/grid-2.png" alt="" />
-            <figcaption></figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="inner-section space-between" id="section">
-        <div class="section-thumbnail mr-40">
-          <figure class="flex direction-column align-center">
-            <img src="img/grid-2.png" alt="" />
-            <figcaption></figcaption>
-          </figure>
-        </div>
-        <div class="section-details">
-          <h3></h3>
-          <p></p>
-        </div>
-      </section>
-      <section class="inner-section space-between" id="section">
-        <div class="section-details ml-40">
-          <h3></h3>
-          <p></p>
-        </div>
-        <div class="section-thumbnail">
-          <figure class="flex direction-column align-center">
-            <img src="img/grid-2.png" alt="" />
-            <figcaption></figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="inner-section space-between" id="section">
-        <div class="section-thumbnail mr-40">
-          <figure class="flex direction-column align-center">
-            <img src="img/grid-2.png" alt="" />
-            <figcaption></figcaption>
-          </figure>
-        </div>
-        <div class="section-details">
-          <h3></h3>
-          <p></p>
-        </div>
-      </section>
-      <section class="inner-section space-between" id="section">
-        <div class="section-details ml-40">
-          <h3></h3>
-          <p></p>
-        </div>
-        <div class="section-thumbnail">
-          <figure class="flex direction-column align-center">
-            <img src="img/grid-2.png" alt="" />
-            <figcaption></figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="inner-section space-between" id="section">
-        <div class="section-thumbnail mr-40">
-          <figure class="flex direction-column align-center">
-            <img src="img/grid-2.png" alt="" />
-            <figcaption></figcaption>
-          </figure>
-        </div>
-        <div class="section-details">
-          <h3></h3>
-          <p></p>
-        </div>
-      </section>-->
+      </section> -->
     </main>
     <footer class="flex justify-center align-center">
       <div class="inner-section direction-column">

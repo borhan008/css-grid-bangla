@@ -169,3 +169,10 @@ footer {
   height: 150px;
   margin-top: 15px;
 }
+
+/** EXAMPLE GRID **/
+.single-grid {
+  background-color: lightgray;
+  color: #222;
+  text-align: center;
+}

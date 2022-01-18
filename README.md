@@ -13,8 +13,8 @@
     <li><a target="_blank" href="https://sultanulborhan.github.io/css-grid-bangla/#section7">গ্রিড লাইন</a></li>
     <li><a href="https://sultanulborhan.github.io/css-grid-bangla/#section9">অ্যালাইন করা</a></li>
     <li><a target="_blank" href="https://sultanulborhan.github.io/css-grid-bangla/#section12">গ্রিড নাকি ইনলাইন গ্রিড? </a></li>
-            <li><a href="ttps://sultanulborhan.github.io/css-grid-bangla/#section13">অটো ফ্লো</a></li>
-            <li><a href="ttps://sultanulborhan.github.io/css-grid-bangla/#section14">গ্রিড অ্যারিয়া নির্ধারণ/নাম দেওয়া</a></li>    
+    <li><a  target="_blank"  href="https://sultanulborhan.github.io/css-grid-bangla/#section13">অটো ফ্লো</a></li>
+    <li><a target="_blank"  href="https://sultanulborhan.github.io/css-grid-bangla/#section14">গ্রিড অ্যারিয়া নির্ধারণ/নাম দেওয়া</a></li>    
 </ol>
 
 <p  align="left">অথবা</p>

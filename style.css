@@ -176,3 +176,25 @@ footer {
   color: #222;
   text-align: center;
 }
+
+
+
+/** RESPONSIVE **/
+@media screen and (max-width 768px) {
+section.inner-section {
+    display: block;
+}
+
+.flex.space-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+}

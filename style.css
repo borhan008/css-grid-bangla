@@ -203,4 +203,11 @@ section.inner-section p, section.inner-section h3 {padding: 0px 15px;}
     justify-content: center;
     align-items: center;
 }
+  .ml-40 {
+  margin-left: 40px;
+}
+
+.mr-40 {
+  margin-right: 40px;
+}
 }

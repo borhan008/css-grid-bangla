@@ -181,10 +181,16 @@ footer {
 
 /** RESPONSIVE **/
 @media only screen and (max-width: 768px) {
+  main{
+      padding: 10px;
+  }
 section.inner-section {
     display: block;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0px;
 }
-
+section.inner-section p, section.inner-section h3 {padding: 0px 15px;}
 .flex.space-between {
     display: flex;
     flex-direction: column;
